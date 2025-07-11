@@ -1,0 +1,27 @@
+/* [project]/src/components/ui/neon-glow.css [app-client] (css) */
+.group:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 6px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00fff7, #00ff85, #00fff7);
+  box-shadow: 0 0 16px 4px #00fff7, 0 0 32px 8px #00ff85;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity .4s cubic-bezier(.4, 0, .2, 1);
+}
+
+.group:hover:after {
+  opacity: .8;
+}
+
+.group:active:after {
+  opacity: .5;
+}
+
+/*# sourceMappingURL=src_components_ui_neon-glow_b52d8e88.css.map*/

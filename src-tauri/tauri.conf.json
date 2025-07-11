@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "studybuddy-pro",
+  "version": "0.1.0",
+  "identifier": "com.abdullahzaffar.studybuddypro",
+"build": {
+  "frontendDist": "../out",
+  "beforeBuildCommand": "npm run build-next",
+  "beforeDevCommand": "npm run dev"
+},
+  "app": {
+    "windows": [
+      {
+        "title": "studybuddy-pro",
+        "width": 800,
+        "height": 600,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' ipc: http://ipc.localhost; img-src 'self' asset: http://asset.localhost",
+      "assetProtocol": {
+        "enable": true,
+        "scope": ["*/**"]
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
